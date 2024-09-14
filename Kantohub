@@ -1,0 +1,452 @@
+local LocalizationService = game:GetService("LocalizationService")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+
+if game.PlaceId == 10449761463 then
+local Window = OrionLib:MakeWindow({Name = "Kanto Hub", IntroText = "Welcome to the Kanto.", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", Icon = "rbxassetid://79769986663362"})
+
+
+OrionLib:MakeNotification({
+	Name = "Welcome to the Kanto",
+	Content = "Logged in as"..Player.Name..".",
+	Image = "rbxassetid://79769986663362",
+	Time = 5
+})
+
+--Main
+
+local MainTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://18737355499",
+	PremiumOnly = false
+})
+
+local MainSection = MainTab:AddSection({
+	Name = "Main"
+})
+
+MainSection:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+  	end    
+})
+
+MainSection:AddSlider({
+	Name = "WalkSpeed (Probably Works)",
+	Min = 16,
+	Max = 100,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(Value)
+		if true then
+			game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = Value
+		end
+	end    
+})
+
+MainSection:AddButton({
+	Name = "Magma Hub",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Commandcracker/Magma-Hub/main/main.lua'))()
+  	end    
+})
+
+--Special
+
+local SpecialTab = Window:MakeTab({
+	Name = "Special",
+	Icon = "rbxassetid://12558753709",
+	PremiumOnly = false
+})
+
+local SpecialSection = SpecialTab:AddSection({
+	Name = "Special"
+})
+
+--Mixed Characters
+
+local MixedSection = SpecialTab:AddSection({
+	Name = "Mixed Characters"
+})
+
+
+--Mixed Powers
+
+MixedSection:AddButton({
+	Name = "Mixed Powers (Mikael and Ace)",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/xiUjbnbx"))()
+		loadstring(game:HttpGet("https://pastebin.com/raw/V8ACJxqq"))()
+		wait(.9)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/adsdasdasda/main/asdasd"))()
+  	end,
+    Image = "rbxassetid://18154629221"
+})
+
+MixedSection:AddButton({
+	Name = "Colorful Hunger (Gojo and Chan)",
+	Callback = function()
+		_G.settings = {
+			["RedStartupId"] = "rbxassetid://1177475221",
+			["RedHitId"] = "rbxassetid://8625377966",
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/main/Latest.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/fassfaasfafs/main/asdasdasdasd"))()
+
+  	end,
+    Image = "rbxassetid://18154629221"
+})
+
+--Double Trouble
+
+MixedSection:AddButton({
+	Name = "Double Trouble",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/uziHCYyU"))()
+  	end,
+    Image = "rbxassetid://8187306832"
+})
+
+
+--SPECIAL CHARACTERS
+local SpecialCharactersSection = SpecialTab:AddSection({
+	Name = "Special Characters"
+})
+
+--Mikael
+
+SpecialCharactersSection:AddButton({
+	Name = "Mikael",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/V8ACJxqq"))()
+  	end,
+    Image = "rbxassetid://18182262939"
+})
+
+--Ace
+
+SpecialCharactersSection:AddButton({
+	Name = "Ace",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/xiUjbnbx"))()
+  	end,
+    Image = "rbxassetid://13715261670"
+})
+
+--Kengkoy
+
+SpecialCharactersSection:AddButton({
+	Name = "Kengkoy",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/geksHwT3"))()
+  	end,
+    Image = "rbxassetid://12291352118"
+})
+
+--Cedrick
+
+SpecialCharactersSection:AddButton({
+	Name = "Cedrick",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/asdsad/main/asdasd"))()
+  	end,
+    Image = "rbxassetid://18182263573"
+})
+
+--ChanChan
+
+SpecialCharactersSection:AddButton({
+	Name = "ChanChan",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/fassfaasfafs/main/asdasdasdasd"))()
+  	end,
+    Image = "rbxassetid://18154629221"
+})
+
+
+--Mastered
+
+local MasteredTab = Window:MakeTab({
+	Name = "Mastered",
+	Icon = "rbxassetid://8187306832",
+	PremiumOnly = false
+})
+
+local MasteredSection = MasteredTab:AddSection({
+	Name = "Saitama"
+})
+
+--Mastered Cedrick
+
+MasteredSection:AddButton({
+	Name = "Mastered Cedrick (Speeding Limit)",
+	Callback = function()
+		_G.settings = {
+			["RedStartupId"] = "rbxassetid://1177475221",
+			["RedHitId"] = "rbxassetid://8625377966",
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/main/Latest.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/PurpleCone/gojo-max-speed/main/gojo%20max%20speed.txt"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/asdsad/main/asdasd"))()
+  	end,
+    Image = "rbxassetid://18154629221"
+})
+
+--Mastered Mikael
+
+MasteredSection:AddButton({
+	Name = "Mastered Mikael",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/xiUjbnbx"))()
+		loadstring(game:HttpGet("https://pastebin.com/raw/V8ACJxqq"))()
+		_G.settings = {
+			["RedStartupId"] = "rbxassetid://1177475221",
+			["RedHitId"] = "rbxassetid://8625377966",
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/main/Latest.lua"))()
+		wait(.9)
+        loadstring(game:HttpGet("https://pastebin.com/raw/V8ACJxqq"))()
+  	end,
+    Image = "rbxassetid://18182262939"
+})
+
+
+--NORMAL CHARACTERS
+
+--Saitama
+
+local BaldTab = Window:MakeTab({
+	Name = "Saitama",
+	Icon = "rbxassetid://15114667107",
+	PremiumOnly = false
+})
+
+local BaldSection = BaldTab:AddSection({
+	Name = "Saitama"
+})
+
+BaldSection:AddButton({
+	Name = "Kengkoy",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/byBCCLat"))()
+  	end    
+})
+
+BaldSection:AddButton({
+	Name = "Chan-Chan",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/afW9m6Fg"))()
+  	end    
+})
+
+BaldSection:AddButton({
+	Name = "Cedrick",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/KADfeFwt"))()
+  	end    
+})
+
+--Garou
+
+local GarouTab = Window:MakeTab({
+	Name = "Garou",
+	Icon = "rbxassetid://15124465439",
+	PremiumOnly = false
+})
+
+local GarouSection = GarouTab:AddSection({
+	Name = "Garou"
+})
+
+GarouSection:AddButton({
+	Name = "Kengkoy",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/0Zc9gxV9"))()
+  	end    
+})
+
+GarouSection:AddButton({
+	Name = "Chan-Chan",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/KBHhFDsr"))()
+  	end    
+})
+
+GarouSection:AddButton({
+	Name = "Cedrick",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/xEDy0sAY"))()
+  	end    
+})
+
+--Genos
+local RobotTab = Window:MakeTab({
+	Name = "Genos",
+	Icon = "rbxassetid://15143528856",
+	PremiumOnly = false
+})
+
+local RobotSection = RobotTab:AddSection({
+	Name = "Genos"
+})
+
+RobotSection:AddButton({
+	Name = "Kengkoy",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/UdVk0hWw"))()
+  	end    
+})
+
+RobotSection:AddButton({
+	Name = "Chan-Chan",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/0JBrJsJM"))()
+  	end    
+})
+
+RobotSection:AddButton({
+	Name = "Cedrick",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/dFgbYhVy"))()
+  	end    
+})
+
+--Sonic
+
+local SonicTab = Window:MakeTab({
+	Name = "Sonic",
+	Icon = "rbxassetid://15114672498",
+	PremiumOnly = false
+})
+
+local SonicSection = SonicTab:AddSection({
+	Name = "Sonic"
+})
+
+SonicSection:AddButton({
+	Name = "Kengkoy",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/xB977CPN"))()
+  	end    
+})
+
+SonicSection:AddButton({
+	Name = "Chan-Chan",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/QRtq21V4"))()
+  	end    
+})
+
+SonicSection:AddButton({
+	Name = "Cedrick",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/RvsrbY2q"))()
+  	end    
+})
+
+--Metal Bat
+
+local BatTab = Window:MakeTab({
+	Name = "Metal Bat",
+	Icon = "rbxassetid://15143529209",
+	PremiumOnly = false
+})
+
+local BatSection = BatTab:AddSection({
+	Name = "Metal Bat"
+})
+
+BatSection:AddButton({
+	Name = "Kengkoy",
+	Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/3pfSvKHY"))()
+  	end    
+})
+
+BatSection:AddButton({
+	Name = "Chan-Chan",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/BatFat/main/BatFat"))()
+  	end    
+})
+
+BatSection:AddButton({
+	Name = "Cedrick",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/sadasdasd/main/sadasdasd"))()
+  	end    
+})
+
+--Katana Dud
+
+local KatanaTab = Window:MakeTab({
+	Name = "Blade Master",
+	Icon = "rbxassetid://15143528539",
+	PremiumOnly = false
+})
+
+local KatanaSection = KatanaTab:AddSection({
+	Name = "Blade Master"
+})
+
+KatanaSection:AddButton({
+	Name = "Kengkoy",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/asdasdasd/main/asdasd"))()
+  	end    
+})
+
+KatanaSection:AddButton({
+	Name = "Chan-Chan",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/asdasd/main/asdasdasdasd"))()
+  	end    
+})
+
+KatanaSection:AddButton({
+	Name = "Cedrick",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/sadasdasdasd/main/sadasdasd"))()
+  	end    
+})
+
+--Tatsumaki
+
+local KatanaTab = Window:MakeTab({
+	Name = "Tatsumaki",
+	Icon = "rbxassetid://18183755570",
+	PremiumOnly = false
+})
+
+local KatanaSection = KatanaTab:AddSection({
+	Name = "Tatsumaki"
+})
+
+KatanaSection:AddButton({
+	Name = "Kengkoy",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/sdsdsad/main/asasd"))()
+  	end    
+})
+
+KatanaSection:AddButton({
+	Name = "Chan-Chan",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/sadasd/main/sd"))()
+  	end    
+})
+
+KatanaSection:AddButton({
+	Name = "Cedrick",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Miks122/sdasdasdasdasdads/main/aadadad"))()
+  	end    
+})
+
+
+end
+OrionLib:Init()
+
